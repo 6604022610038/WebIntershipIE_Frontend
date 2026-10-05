@@ -1,0 +1,48 @@
+/* frontend/src/pages/intelligence/student/mentor.css */
+.mentor-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  min-height: 480px;
+}
+
+.mentor-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.mentor-suggestion-chip {
+  border: 1px solid #cfe0f7;
+  background: #f3f8ff;
+  color: #173f83;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.mentor-suggestion-chip:hover:not(:disabled) {
+  background: #e2eeff;
+}
+
+.mentor-suggestion-chip:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mentor-chat-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  border: 1px solid #e4ecf7;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.mentor-chat-wrap .chat-window {
+  width: 100%;
+}

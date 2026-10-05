@@ -1,0 +1,452 @@
+/* หน้าหลักนักศึกษา (Dashboard) — ใช้ตัวแปรสีจาก theme.css */
+
+.dx-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 22px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: var(--ink-700, #29436d);
+}
+
+/* ---------- Hero ---------- */
+.dx-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 28px;
+  padding: 30px 32px;
+  border-radius: 18px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 92% -10%, rgba(126, 165, 255, .55) 0 180px, transparent 181px),
+    radial-gradient(circle at 70% 120%, rgba(63, 107, 232, .55) 0 200px, transparent 201px),
+    linear-gradient(120deg, #0f2a63 0%, #1d47b0 60%, #3f6be8 100%);
+  box-shadow: 0 14px 34px rgba(29, 71, 176, .28);
+}
+
+.dx-eyebrow {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .16);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.dx-hero h1 {
+  margin: 12px 0 6px;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+}
+
+.dx-hero-sub {
+  margin: 0;
+  font-size: 15px;
+  color: #dbe6ff;
+  max-width: 62ch;
+}
+
+.dx-hero-quote {
+  margin: 14px 0 0;
+  font-size: 13.5px;
+  font-style: italic;
+  color: #b9cdfa;
+}
+
+.dx-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dx-hero-side {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dx-hero-chip {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .13);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, .18);
+}
+
+.dx-hero-chip small {
+  display: block;
+  font-size: 11.5px;
+  color: #b9cdfa;
+  font-weight: 600;
+}
+
+.dx-hero-chip b {
+  display: block;
+  margin-top: 2px;
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ---------- ปุ่ม ---------- */
+.dx-btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background .15s ease, box-shadow .15s ease, transform .05s ease;
+}
+.dx-btn:active { transform: translateY(1px); }
+.dx-btn-light { background: #fff; color: #1d47b0; }
+.dx-btn-light:hover { box-shadow: 0 6px 16px rgba(0, 0, 0, .18); }
+.dx-btn-ghost { background: rgba(255, 255, 255, .12); color: #fff; border-color: rgba(255, 255, 255, .35); }
+.dx-btn-ghost:hover { background: rgba(255, 255, 255, .22); }
+.dx-btn-outline { background: #fff; color: var(--blue-600, #2f5fd6); border-color: #cfdcf6; }
+.dx-btn-outline:hover { background: #f1f5ff; border-color: #a9c0f3; }
+.dx-full { width: 100%; margin-top: 14px; }
+
+/* ---------- การ์ดตัวเลขสรุป ---------- */
+.dx-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dx-stat {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  background: var(--surface, #fff);
+  border: 1px solid var(--line, #e3eaf6);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .18s ease, transform .18s ease;
+}
+.dx-stat-click { cursor: pointer; }
+.dx-stat-click:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+.dx-stat-icon {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.dx-stat-icon.blue { background: #e6eeff; color: #2f5fd6; }
+.dx-stat-icon.green { background: #dcf6ec; color: #18906a; }
+.dx-stat-icon.orange { background: #fff0d9; color: #c27a0b; }
+.dx-stat-icon.purple { background: #efe6ff; color: #7a49d6; }
+
+.dx-stat-body { flex: 1; min-width: 0; }
+.dx-stat-body p { margin: 0; font-size: 13px; color: var(--ink-500, #52668d); font-weight: 600; }
+.dx-stat-body small { display: block; margin-top: 6px; font-size: 12px; color: var(--ink-400, #8190a8); }
+
+.dx-stat-num {
+  margin: 4px 0 6px;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy-900, #081c48);
+  line-height: 1.2;
+}
+.dx-stat-num span { margin-left: 6px; font-size: 13px; font-weight: 600; color: var(--ink-400, #8190a8); }
+
+.dx-bar { height: 7px; border-radius: 99px; background: #e8eefb; overflow: hidden; }
+.dx-bar i { display: block; height: 100%; border-radius: 99px; transition: width .6s ease; }
+.dx-bar i.blue { background: linear-gradient(90deg, #3f6be8, #7ea5ff); }
+.dx-bar i.green { background: linear-gradient(90deg, #20a978, #6fd9b3); }
+
+.dx-stars { display: flex; gap: 2px; font-size: 16px; }
+.dx-stars i { font-style: normal; color: #d6dcea; }
+.dx-stars i.on { color: #f2b01e; }
+
+.dx-arrow {
+  align-self: center;
+  font-size: 26px;
+  color: #a7b6d6;
+  line-height: 1;
+}
+
+/* ---------- ตารางเลย์เอาต์หลัก ---------- */
+.dx-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.dx-col { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+
+.dx-card {
+  padding: 20px;
+  background: var(--surface, #fff);
+  border: 1px solid var(--line, #e3eaf6);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.dx-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.dx-card-head h2 { margin: 0; font-size: 16px; font-weight: 800; color: var(--navy-800, #0f2a63); }
+
+.dx-link {
+  border: 0;
+  background: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue-600, #2f5fd6);
+}
+.dx-link:hover { background: var(--blue-100, #e9efff); }
+
+.dx-empty { margin: 0; padding: 18px 8px; text-align: center; color: var(--ink-400, #8190a8); font-size: 13.5px; }
+.dx-empty.small { padding: 8px 0; text-align: left; }
+
+/* ---------- ข้อมูลฝึกงาน ---------- */
+.dx-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--line, #e3eaf6);
+}
+.dx-info small { display: block; font-size: 12px; color: var(--ink-400, #8190a8); font-weight: 600; }
+.dx-info b { display: block; margin-top: 2px; font-size: 14.5px; color: var(--navy-800, #0f2a63); line-height: 1.45; }
+.dx-info em { display: block; font-size: 12.5px; font-style: normal; color: var(--ink-500, #52668d); }
+
+.dx-progress {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding-top: 18px;
+}
+
+.dx-ring { position: relative; width: 150px; height: 150px; }
+.dx-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.dx-ring circle { fill: none; stroke-width: 12; }
+.dx-ring-bg { stroke: #e8eefb; }
+.dx-ring-fg { stroke: #3f6be8; stroke-linecap: round; transition: stroke-dashoffset .8s ease; }
+.dx-ring-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.dx-ring-text strong { font-size: 30px; font-weight: 800; color: var(--navy-900, #081c48); line-height: 1; }
+.dx-ring-text span { margin-top: 4px; font-size: 12px; color: var(--ink-500, #52668d); font-weight: 600; }
+
+.dx-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
+.dx-steps li { position: relative; display: flex; gap: 12px; padding: 0 0 16px; }
+.dx-steps li:last-child { padding-bottom: 0; }
+.dx-steps li::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  bottom: 0;
+  width: 2px;
+  background: #dbe4f6;
+}
+.dx-steps li:last-child::before { display: none; }
+.dx-steps li.done::before { background: #20a978; }
+.dx-steps i {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #c6d3ee;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+}
+.dx-steps li.done i { background: #20a978; border-color: #20a978; }
+.dx-steps li.active i { border-color: #3f6be8; box-shadow: 0 0 0 4px rgba(63, 107, 232, .18); }
+.dx-steps b { display: block; font-size: 14px; color: var(--navy-800, #0f2a63); }
+.dx-steps span { font-size: 12.5px; color: var(--ink-400, #8190a8); }
+.dx-steps li.active b { color: var(--blue-600, #2f5fd6); }
+
+/* ---------- รายงานล่าสุด ---------- */
+.dx-reports, .dx-activities, .dx-news { list-style: none; margin: 0; padding: 0; }
+
+.dx-reports li, .dx-activities li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf1fa;
+}
+.dx-reports li:last-child, .dx-activities li:last-child { border-bottom: 0; }
+
+.dx-week {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #eef3ff;
+  color: var(--blue-600, #2f5fd6);
+  font-size: 13px;
+  font-weight: 800;
+}
+.dx-report-main, .dx-activity-main { flex: 1; min-width: 0; }
+.dx-report-main b, .dx-activity-main b {
+  display: block;
+  font-size: 14px;
+  color: var(--navy-800, #0f2a63);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dx-report-main span, .dx-activity-main span { font-size: 12.5px; color: var(--ink-400, #8190a8); }
+
+.dx-feedback {
+  margin: 14px 0 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #f3f7ff;
+  border-left: 4px solid #3f6be8;
+}
+.dx-feedback small { display: block; font-size: 12px; font-weight: 700; color: var(--blue-600, #2f5fd6); }
+.dx-feedback p { margin: 6px 0 0; font-size: 14px; line-height: 1.6; color: var(--ink-700, #29436d); }
+
+/* ---------- ป้ายสถานะ ---------- */
+.dx-pill {
+  flex: none;
+  display: inline-block;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.dx-pill.blue { background: #e6eeff; color: #2650bd; }
+.dx-pill.green { background: #dcf6ec; color: #12775a; }
+.dx-pill.orange { background: #fff0d9; color: #a86504; }
+.dx-pill.red { background: #ffe5e6; color: #c43439; }
+.dx-pill.purple { background: #efe6ff; color: #6a3cc0; }
+.dx-pill.gray { background: #eef1f6; color: #5d6c88; }
+
+/* ---------- กิจกรรม ---------- */
+.dx-when {
+  flex: none;
+  width: 48px;
+  padding: 6px 0;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 1.15;
+}
+.dx-when b { display: block; font-size: 18px; font-weight: 800; }
+.dx-when span { font-size: 11px; font-weight: 700; }
+.dx-when.blue { background: #e6eeff; color: #2650bd; }
+.dx-when.orange { background: #fff0d9; color: #a86504; }
+.dx-when.purple { background: #efe6ff; color: #6a3cc0; }
+.dx-when.gray { background: #eef1f6; color: #5d6c88; }
+
+/* ---------- ประกาศ ---------- */
+.dx-news li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 12px;
+  align-items: center;
+  padding: 11px 0;
+  border-bottom: 1px solid #edf1fa;
+}
+.dx-news li:last-child { border-bottom: 0; }
+.dx-news b { font-size: 14px; color: var(--navy-800, #0f2a63); line-height: 1.45; }
+.dx-news small { grid-column: 2; font-size: 12px; color: var(--ink-400, #8190a8); }
+
+/* ---------- ปฏิทิน ---------- */
+.dx-cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.dx-cal-head strong { font-size: 15px; color: var(--navy-800, #0f2a63); }
+.dx-cal-head button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--line, #e3eaf6);
+  background: #fff;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--ink-500, #52668d);
+}
+.dx-cal-head button:hover { background: #eef3ff; }
+
+.dx-cal-week, .dx-cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+.dx-cal-week span { padding: 6px 0; font-size: 12px; font-weight: 700; color: var(--ink-400, #8190a8); }
+
+.dx-cal-grid button {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-700, #29436d);
+}
+.dx-cal-grid button:hover { background: #eef3ff; }
+.dx-cal-grid button.today { box-shadow: inset 0 0 0 2px #9fbaf6; }
+.dx-cal-grid button.selected { background: #2f5fd6; color: #fff; }
+.dx-cal-grid button.has-event::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: #f29a1f;
+}
+.dx-cal-grid button.selected.has-event::after { background: #fff; }
+
+.dx-cal-events { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line, #e3eaf6); }
+.dx-cal-events > small { font-size: 12.5px; font-weight: 700; color: var(--ink-500, #52668d); }
+.dx-cal-event { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 13.5px; }
+.dx-cal-event i { flex: none; width: 8px; height: 8px; border-radius: 50%; background: #9aa7c2; }
+.dx-cal-event i.blue { background: #3f6be8; }
+.dx-cal-event i.orange { background: #f29a1f; }
+.dx-cal-event i.purple { background: #8a5be0; }
+.dx-cal-event span { flex: none; color: var(--ink-400, #8190a8); font-size: 12.5px; }
+.dx-cal-event b { color: var(--navy-800, #0f2a63); font-weight: 700; min-width: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+  .dx-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dx-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 820px) {
+  .dx-hero { grid-template-columns: 1fr; padding: 24px 22px; }
+  .dx-hero-side { flex-direction: row; flex-wrap: wrap; }
+  .dx-hero-chip { flex: 1 1 160px; }
+  .dx-hero h1 { font-size: 25px; }
+}
+
+@media (max-width: 640px) {
+  .dx-page { padding: 14px; gap: 14px; }
+  .dx-stats { grid-template-columns: 1fr; }
+  .dx-info { grid-template-columns: 1fr; }
+  .dx-progress { grid-template-columns: 1fr; justify-items: center; }
+  .dx-steps { width: 100%; }
+  .dx-card { padding: 16px; }
+}

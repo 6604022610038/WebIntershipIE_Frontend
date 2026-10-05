@@ -1,0 +1,294 @@
+
+.twin-live-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+  margin-bottom: 16px;
+}
+
+.twin-live-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e3eaf4;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.twin-live-card.danger {
+  border-color: #f3d2d4;
+  background: #fff9f9;
+}
+
+.twin-live-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf4ff;
+  font-size: 17px;
+}
+
+.twin-live-card small,
+.twin-live-card strong {
+  display: block;
+}
+
+.twin-live-card small {
+  color: #8794aa;
+  font-size: 10.5px;
+}
+
+.twin-live-card strong {
+  margin-top: 2px;
+  color: #173f83;
+  font-size: 16px;
+}
+
+.twin-live-card strong em {
+  font-size: 10.5px;
+  color: #8794aa;
+  font-style: normal;
+}
+
+.twin-live-card.danger strong {
+  color: #e5484d;
+}
+
+.twin-refresh-btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 1050px) {
+  .twin-live-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .twin-live-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* frontend/src/pages/intelligence/student/digitaltwin.css */
+/* =========================================================
+   DIGITAL TWIN PAGE
+   ========================================================= */
+
+.twin-hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border: 1px solid #d7e4f7;
+  border-radius: 11px;
+  background: linear-gradient(115deg, #edf5ff, #e2eeff);
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.twin-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #173f83;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.twin-hero-info {
+  flex: 1;
+  min-width: 220px;
+}
+
+.twin-hero-info h2 {
+  margin: 0;
+  color: #173f83;
+  font-size: 18px;
+}
+
+.twin-hero-info p {
+  margin: 4px 0 0;
+  color: #6680a5;
+  font-size: 13px;
+}
+
+.twin-insight {
+  margin-top: 8px !important;
+  color: #3474dc !important;
+  font-weight: 600;
+}
+
+.twin-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.twin-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.twin-progress-breakdown {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.breakdown-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.breakdown-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: #52668f;
+}
+
+.breakdown-top strong {
+  color: #173f83;
+}
+
+.breakdown-track {
+  height: 7px;
+  border-radius: 6px;
+  background: #eef2f9;
+  overflow: hidden;
+}
+
+.breakdown-fill {
+  height: 100%;
+  border-radius: 6px;
+  background: #3474dc;
+}
+
+.breakdown-row small {
+  color: #94a2b8;
+  font-size: 11px;
+}
+
+.risk-score-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .twin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   🧠 SMART RECOMMENDATION ENGINE
+   ========================================================= */
+.reco-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reco-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e4ecf7;
+  border-radius: 10px;
+  background: #fbfdff;
+}
+
+.reco-item.priority-high {
+  border-left: 4px solid #e5484d;
+}
+.reco-item.priority-medium {
+  border-left: 4px solid #f5a623;
+}
+.reco-item.priority-low {
+  border-left: 4px solid #2fa86b;
+}
+
+.reco-icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.reco-body h4 {
+  margin: 0 0 3px;
+  font-size: 13.5px;
+  color: #173f83;
+}
+
+.reco-body p {
+  margin: 0 0 4px;
+  font-size: 12.5px;
+  color: #52668f;
+}
+
+.reco-action {
+  font-size: 12px;
+  color: #3474dc !important;
+  font-weight: 600;
+}
+
+/* =========================================================
+   📄 REPORT INTELLIGENCE
+   ========================================================= */
+.rq-summary-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.rq-summary-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.rq-summary-stat strong {
+  font-size: 20px;
+  color: #173f83;
+}
+
+.rq-summary-stat span {
+  font-size: 11.5px;
+  color: #94a2b8;
+}
+
+.rq-flag-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rq-flag-item {
+  padding: 10px 12px;
+  border: 1px solid #f3e3c8;
+  background: #fff9ee;
+  border-radius: 8px;
+  font-size: 12.5px;
+  color: #7a5c1e;
+}
+
+.rq-flag-item strong {
+  color: #4a3610;
+}

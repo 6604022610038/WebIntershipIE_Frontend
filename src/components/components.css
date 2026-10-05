@@ -1,0 +1,206 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 40px 16px;
+  text-align: center;
+  color: #8794aa;
+}
+
+.empty-icon {
+  font-size: 28px;
+  opacity: 0.7;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 14px;
+  color: #8794aa;
+}
+
+/* =========================================================
+   PROGRESS RING (ProgressRing.jsx)
+   ========================================================= */
+
+.progress-ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.progress-ring-text strong {
+  font-size: 20px;
+  color: #173f83;
+  line-height: 1.1;
+}
+
+.progress-ring-text span {
+  font-size: 11px;
+  color: #8ea0bc;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   JOURNEY TIMELINE (JourneyTimeline.jsx)
+   ========================================================= */
+
+.journey-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.journey-item {
+  display: flex;
+  gap: 12px;
+}
+
+.journey-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.journey-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eef2f9;
+  font-size: 14px;
+  border: 2px solid #dfe7f4;
+}
+
+.journey-done .journey-dot {
+  background: #e5f8f0;
+  border-color: #a7e6cb;
+}
+
+.journey-warning .journey-dot {
+  background: #fff1dc;
+  border-color: #f4cf8f;
+}
+
+.journey-future .journey-dot,
+.journey-pending .journey-dot {
+  background: #edf2ff;
+  border-color: #cdd9f6;
+}
+
+.journey-connector {
+  width: 2px;
+  flex: 1;
+  min-height: 24px;
+  background: #e3e9f3;
+  margin: 2px 0;
+}
+
+.journey-content {
+  padding-bottom: 22px;
+  flex: 1;
+}
+
+.journey-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.journey-top strong {
+  font-size: 13.5px;
+  color: #173f83;
+}
+
+.journey-date {
+  font-size: 11.5px;
+  color: #94a2b8;
+  white-space: nowrap;
+}
+
+.journey-content p {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  color: #6680a5;
+}
+
+.journey-empty {
+  padding: 24px 10px;
+  text-align: center;
+  color: #94a2b8;
+  font-size: 12px;
+}
+
+/* =========================================================
+   RISK BADGE helpers (used with existing Badge component)
+   ========================================================= */
+
+.risk-reason-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.risk-reason-list li {
+  font-size: 12.5px;
+  color: #65748e;
+  padding-left: 16px;
+  position: relative;
+}
+
+.risk-reason-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #e69a22;
+}
+
+/* =========================================================
+   SKILL BARS (Digital Twin skill radar substitute)
+   ========================================================= */
+
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-bar-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 34px;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  color: #52668f;
+}
+
+.skill-bar-track {
+  height: 8px;
+  border-radius: 6px;
+  background: #eef2f9;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #3474dc, #7654d6);
+}

@@ -1,0 +1,26 @@
+*{box-sizing:border-box}
+
+html,body,#root{
+  margin:0;
+  width:100%;
+  min-height:100%;
+}
+
+body{
+  font-family:"Noto Sans Thai","Segoe UI",Arial,sans-serif;
+  background:#f4f7fd;
+  color:#334d78;
+}
+
+button,input,textarea,select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+#root{
+  max-width:none;
+  padding:0;
+}
