@@ -417,7 +417,7 @@ function StudentTwinModal({ studentId, onClose, onNavigate }) {
           <div className="cc-modal-section">
             <h4>🗺️ Internship Journey</h4>
             <div className="cc-modal-journey">
-              <JourneyTimeline events={twin.journey || []} />
+              <JourneyTimeline events={twin.journey || []} compact />
             </div>
           </div>
 
